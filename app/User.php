@@ -30,4 +30,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'activation_token'
     ];
+
+    public function libraries(){
+        return $this->belongsToMany("App\Libraries");
+    }
 }
