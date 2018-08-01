@@ -19,8 +19,8 @@ class CreateTableLibraryUser extends Migration
             $table->integer('library_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->timestamps();
-            $table->foreign('library_id')->references('id')->on('libraries');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('library_id')->references('id')->on('libraries')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
         });
 
     }

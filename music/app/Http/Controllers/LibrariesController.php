@@ -98,7 +98,9 @@ class LibrariesController extends BaseController
         $data = Libraries::find($id)->delete();
 
         if($data){
-            return response()->json($data);
+            return response()->json(array("code"=>"200"));
+        }else{
+            return response()->json("Error");
         }
     }
 }

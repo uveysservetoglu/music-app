@@ -30,11 +30,16 @@ class BaseController extends Controller
      * Sort Order boş gelirse son değeri almak için
      *
      * @param $model
-     * @return mixed
+     * @return integer
      */
     protected function sortOrder($model){
         $source = '\App\\'.$model;
         $data = $source::latest()->first();
-        return $data->sort_order + 1;
+        if($data){
+            return $data->sort_order + 1;
+        }else{
+            return 1;
+        }
+
     }
 }
