@@ -32,3 +32,14 @@ $factory->define(App\Libraries::class, function (Faker $faker) {
         'sort_order' => 0,
     ];
 });
+
+$factory->define(App\Song::class, function (Faker $faker) {
+    return [
+        'name' => "Fazıl Say".rand(0,10),
+        'slug' => str_slug("Fazıl Say".rand(0,10)),
+        'status' => "a",
+        'hit' => 0,
+        'sort_order' => 0,
+        'libraries_id' => rand(0,100),
+    ];
+});

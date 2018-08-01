@@ -22,5 +22,8 @@ class DatabaseSeeder extends Seeder
                 $libraries->Users()->attach($sliced);
             }
         });
+
+        factory(\App\Song::class, 20)->create();
     }
+
 }

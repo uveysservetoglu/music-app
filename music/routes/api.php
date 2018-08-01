@@ -15,6 +15,12 @@ Route::group(['middleware' => 'auth:api'], function() {
     //libraries Router
     Route::resource('libraries', 'LibrariesController');
 
+    //Song Router
+    Route::resource('song', 'SongController');
+
+    //play
+    Route::get('libraries/play/{id}', 'LibrariesController@play');
+
     Route::get('logout', 'AuthController@logout');
     Route::get('user', 'AuthController@user');
 });

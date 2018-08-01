@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Song;
+use App\User;
 use Illuminate\Http\Request;
 
-class SongController extends Controller
+class SongController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -13,17 +15,8 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $data = Song::all();
+        return response()->json($data);
     }
 
     /**
@@ -34,7 +27,21 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sort = parent::sortOrder("Song");
+        $data = new Song([
+            'name' => request("name"),
+            'slug' => str_slug(request("name")),
+            'status' => request("status"),
+            'hit' => 0,
+            'sort_order' => $sort,
+            'libraries_id' => request("libraries_id"),
+        ]);
+
+        $data->save();
+
+        if ($data) {
+            return response()->json($data);
+        }
     }
 
     /**
@@ -45,18 +52,8 @@ class SongController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        $data = parent::hitInc("Song", $id);
+        return response()->json($data->first());
     }
 
     /**
@@ -68,7 +65,20 @@ class SongController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Song::find($id);
+
+        $data->name = request("name");
+        $data->slug = str_slug(request("name"));
+        $data->name = request("name");
+        $data->status = request("status");
+        $data->status = request("sort_order");
+        $data->libraries_id = request("libraries_id");
+
+        $data->save();
+
+        if ($data) {
+            return response()->json($data);
+        }
     }
 
     /**
@@ -79,6 +89,12 @@ class SongController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Song::find($id)->delete();
+
+        if ($data) {
+            return response()->json(array("code" => "200"));
+        } else {
+            return response()->json("Error");
+        }
     }
 }

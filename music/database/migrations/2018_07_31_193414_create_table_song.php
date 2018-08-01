@@ -18,20 +18,14 @@ class CreateTableSong extends Migration
             $table->increments('id');
 
             $table->string('name')->comment("Song Name");;
-            $table->string('file')->comment("For Song Image (*.mp3 vs..)");;
-            $table->string('type')->comment("Music Type (Rock, Jazz, Blues, Soul)");
+            $table->string('file')->comment("For Song Image (*.mp3 vs..)")->nullable();
+            $table->string('type')->comment("Music Type (Rock, Jazz, Blues, Soul)")->nullable();
             $table->string('slug')->comment("Music slug");
-
+            $table->integer('hit')->comment("Music Hit");
             $table->char('status')->comment("Music Status(a)Active,(p)Passive)");
-
             $table->integer('sort_order')->comment("Sort Order");
 
-
-            $table->Integer('library_id')->unsigned()->nullable();
-            $table->foreign('library_id')->references('id')->on ('libraries')->onDelete('set null');
-
-
-
+            $table->Integer('libraries_id')->unsigned()->nullable();
 
             $table->timestamps();
             $table->softDeletes();

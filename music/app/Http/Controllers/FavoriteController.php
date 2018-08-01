@@ -30,7 +30,6 @@ class FavoriteController extends BaseController
 
     }
 
-
     /**
      *
      * Add favor || remove favor

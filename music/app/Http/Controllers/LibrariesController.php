@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Libraries;
+use App\Song;
 use Illuminate\Http\Request;
 
 class LibrariesController extends BaseController
@@ -14,8 +15,8 @@ class LibrariesController extends BaseController
      */
     public function index()
     {
-        $index = Libraries::all();
-        return response()->json($index->all());
+        $data = Libraries::all();
+        return response()->json($data);
     }
 
 
@@ -101,6 +102,13 @@ class LibrariesController extends BaseController
             return response()->json(array("code" => "200"));
         } else {
             return response()->json("Error");
+        }
+    }
+
+    public function play($id){
+        $data = Song::where("libraries_id",$id);
+        if ($data) {
+            return response()->json($data);
         }
     }
 }
