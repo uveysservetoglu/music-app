@@ -1,0 +1,1785 @@
+{
+	"info": {
+		"_postman_id": "0f915f2f-b398-4f52-91cd-1483e49ecc9f",
+		"name": "LaraApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": null,
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"ab@admin.com\",\n\t\"password\":\"123\",\n\t\"remember_me\":true\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "76c8f671-c2bc-4b99-8b5f-8dae7a73c888",
+							"name": "Login User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\":\"uveys@servetoglu.com\",\n\t\"password\":\"123\",\n\t\"remember_me\":true\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:30 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:30 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRiY2E4Y2I0OTMxNDg1NzQ2Nzk4NjcwNWM1ZjY1YzM5YzM4MjRhNjkzZWQwNDYyN2IwZjYyOTZkMTZjMmVjMWNjNDhkNjhjZGE2YzA3YjNmIn0.eyJhdWQiOiIxIiwianRpIjoiNGJjYThjYjQ5MzE0ODU3NDY3OTg2NzA1YzVmNjVjMzljMzgyNGE2OTNlZDA0NjI3YjBmNjI5NmQxNmMyZWMxY2M0OGQ2OGNkYTZjMDdiM2YiLCJpYXQiOjE1MzI5OTQ3NDksIm5iZiI6MTUzMjk5NDc0OSwiZXhwIjoxNTY0NTMwNzQ5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.dRkelJiFMyMewhe3JzytksVrxHsoMoWusHClmyg55qFJYa-bEPBOKS9erURmT1xzk23f6yYGlv5PHs6qFUVcAIjP4DDaOiPI7UQknJQoI2xLZxUyK33jqT_xADMz1WRi3yjG-aGtjGeWkESk5Pn_8XbbkuNEnEYwhtZpV7GU5il9yiQbnGFU8KrmdC59CKHfHMkYu9H9V0MGk1NXsomhabKXaJoArS5oxSopTMs0FmNNRK_hfGj-RBTzHPtY437Clb08nNx8qRLK4bAhCzkROLQXClUgYrmno29rKvJLvDCpI4T_s2u5eesiz5YlKF-0xXpIbjh67A1nw-6AFcwSVAxEnRmYoLn3fCrHrqiJ7zuw5T8ATpM9j4swIURBeZDW_eX0LAr0G9KjKbvFt-aJ08npkv2ECMgnAlQIyXFzBaFMDto6kpeTlJpxgxJKqPcgap8DjLXSwoKwlczGnaVfT1E1rcOsCNpS-AqAlY5iMKJyl3FqzvQxGtBt68cpzC89C8ldOWPcbi-FXZdtVkKU76igSurAz34chmAS7IY_ZepQ9_pgYnfNzcxXNSqGS_Dx16LT72yPDN-wYaAtQAsSflaOnqWU4JjLplRwP4W5RaC-4vmVTGqj9bN_5aSwYhjaEGm9q1cc2JdYwLeV0xvX7fFJLI3T38awCAlTIPGSeBE\",\"token_type\":\"Bearer\",\"expires_at\":\"2018-08-06 23:52:30\"}"
+						}
+					]
+				},
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"uveys\",\n\t\"email\":\"uveysservetogl@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"favorite"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "bafc3c3e-e4b3-49dd-aa93-f9a4d2cccaab",
+							"name": "Create New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveys@servetoglu.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/signup",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:17 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:17 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Successfully created user!\"}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost/api/user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNlMjc1N2VjZjMwOTc2YTE3ODUwMWE0Y2E2Y2Y5NjI3NzY0OWI3ZTgyNjU1MTU4ZmNmZTcyMjA5NTU0MWUzOTBiNmY1M2E0OWQ4ZTIyMTMzIn0.eyJhdWQiOiIxIiwianRpIjoiM2UyNzU3ZWNmMzA5NzZhMTc4NTAxYTRjYTZjZjk2Mjc3NjQ5YjdlODI2NTUxNThmY2ZlNzIyMDk1NTQxZTM5MGI2ZjUzYTQ5ZDhlMjIxMzMiLCJpYXQiOjE1MzMwNzY3OTQsIm5iZiI6MTUzMzA3Njc5NCwiZXhwIjoxNTY0NjEyNzk0LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.F6Jvj5vL-FEGik-i45e86IWaq8fplBnnjY4OQabsSYT-RxmJyxMVn1F67kjd0lZF1hcv9_fNuPRT1DrSQsxQ5Ym_1ZNgasvsmVPxnDmr1CXFDb9dNluZ6QjlRxHPZ1DqAx2XiZLhCUMgKZNo29mdZy4eeIPOGM2fLNBycVl-fjVchHZS7zklJqmuE_q48OKUFw604rkRYJ8xKtrqkpCB45n6e3WO20XkMKSSaYHfxr3e39TZfAAeW62DooMQR3lJJoe3B_6B7GqX2_ohBKMinMVWuH3xmhbir-rXq27gp43cxv_z9cFRunUfNk30RBiOhyTfKwlRCi-3B_z4NVrx6IjEnek928pL7jJcDDcBDNyV_0hJGsXjaWmh7KB8ES5xlBODXP3dYZjZOkj7IPezbhEV0Lbd4BuFWwCaAMfSe583je12xi2K84oeyQTs4J8q5w0VzhVuwfGspj31pMr5q4MJUGt5J-UG2wiLMRjOQxCFxaiSec_OuycO8iCU_r7-X8yTOFtQ9dpfydJGby3ytEmlVPCjsakzwo4YixrOXO1AXGzVZ9yMTMX9Sl5nVvMOrf_VtuZiECkUBNPDHdOPbHWyvIXTD6Nvx4XTev_LPY1W9rV3Wn0kd3BD0UzQRsq6EtgZbfPpEFBoLIWQqyzesi1-k8fNV_8eQsPzmJtXQ7k"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorite",
+			"description": null,
+			"item": [
+				{
+					"name": "Add Favorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyNDQ5ZmQ1ZTRkY2M2OGQ5NWQzMzY1MjMyNGE0NTBiNDdkOTkzY2UzOWMyMDRjY2RmY2Y4OGMwNTEwNmNkZWM1Y2ZmMGY4MmUyNThhMWY3In0.eyJhdWQiOiIxIiwianRpIjoiNDI0NDlmZDVlNGRjYzY4ZDk1ZDMzNjUyMzI0YTQ1MGI0N2Q5OTNjZTM5YzIwNGNjZGZjZjg4YzA1MTA2Y2RlYzVjZmYwZjgyZTI1OGExZjciLCJpYXQiOjE1MzMxNDk0NTQsIm5iZiI6MTUzMzE0OTQ1NCwiZXhwIjoxNTY0Njg1NDU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JVf51uR5ecDMVIlALIWIE_-gWTzZDk8IBiJuKeYNPP0hLAfeNTQs5Aw6xZIzEtQ40EWZSCTnFflYvYW4BcxWh4C1FXK8DhJ1WxBzIN0pjmjCsmLfHbL7Ywsntn2qe1BbbTYoNZSH7ZZ7gBVFF2DYWhEYk64wsadzSdNaHESrJDya2GhiNuVxy33-jB7lgFMDc9JMMHX4u7r2iN08xne8kCKJLahDM7DcSco8RsNZcaOllgKCpwTLjXhSuTiKxxpFOUjerjhEFQz6Z6FZO0T48hEJzUkLIZbFY-9Km40vtVD5QWsgyUsbn1e91ZFsRA_Sraw_Lq2aQteJyZhZSPqgBr6PEBmWo-9dVus_ebpQU8NZYp_dfo78QEeAP2B4nnRmUxxKBV0YRjuKTmTJwfLtIMWyysdCdHXu2L6JvaBE3EuMNgehduyMeUxn4SuZ-ZvGk4YmOw7ZReug6dlZwPMR1ebyG6Kz20XQnsfOOK01-PwkkLBcjrD5HMFhVO0GdOQn94DCrVX0IlK8KwJrMt-PCmakf9H4vqcyYmvpv4Ksc118ZRnGHrgyjaIHYCXZJKJJ4XH8NJDchik4PpylLw-qw1YrDN1l3aUQZLnFBcjK6vT-2Naoya6DS_Kr3lSl8hw_zauNfNnAMfb-hs6CsgAbzK9ewnV1n3gwF0OGXEUbMPQ"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"libraryId\":111,\n\t\"action\":\"attach\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"favorite"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3600d4bf-bee6-41be-ad24-d2c5c7a4b4b1",
+							"name": "Create New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveys@servetoglu.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/signup",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:17 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 23:52:17 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Successfully created user!\"}"
+						}
+					]
+				},
+				{
+					"name": "Favorite List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQyNDQ5ZmQ1ZTRkY2M2OGQ5NWQzMzY1MjMyNGE0NTBiNDdkOTkzY2UzOWMyMDRjY2RmY2Y4OGMwNTEwNmNkZWM1Y2ZmMGY4MmUyNThhMWY3In0.eyJhdWQiOiIxIiwianRpIjoiNDI0NDlmZDVlNGRjYzY4ZDk1ZDMzNjUyMzI0YTQ1MGI0N2Q5OTNjZTM5YzIwNGNjZGZjZjg4YzA1MTA2Y2RlYzVjZmYwZjgyZTI1OGExZjciLCJpYXQiOjE1MzMxNDk0NTQsIm5iZiI6MTUzMzE0OTQ1NCwiZXhwIjoxNTY0Njg1NDU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JVf51uR5ecDMVIlALIWIE_-gWTzZDk8IBiJuKeYNPP0hLAfeNTQs5Aw6xZIzEtQ40EWZSCTnFflYvYW4BcxWh4C1FXK8DhJ1WxBzIN0pjmjCsmLfHbL7Ywsntn2qe1BbbTYoNZSH7ZZ7gBVFF2DYWhEYk64wsadzSdNaHESrJDya2GhiNuVxy33-jB7lgFMDc9JMMHX4u7r2iN08xne8kCKJLahDM7DcSco8RsNZcaOllgKCpwTLjXhSuTiKxxpFOUjerjhEFQz6Z6FZO0T48hEJzUkLIZbFY-9Km40vtVD5QWsgyUsbn1e91ZFsRA_Sraw_Lq2aQteJyZhZSPqgBr6PEBmWo-9dVus_ebpQU8NZYp_dfo78QEeAP2B4nnRmUxxKBV0YRjuKTmTJwfLtIMWyysdCdHXu2L6JvaBE3EuMNgehduyMeUxn4SuZ-ZvGk4YmOw7ZReug6dlZwPMR1ebyG6Kz20XQnsfOOK01-PwkkLBcjrD5HMFhVO0GdOQn94DCrVX0IlK8KwJrMt-PCmakf9H4vqcyYmvpv4Ksc118ZRnGHrgyjaIHYCXZJKJJ4XH8NJDchik4PpylLw-qw1YrDN1l3aUQZLnFBcjK6vT-2Naoya6DS_Kr3lSl8hw_zauNfNnAMfb-hs6CsgAbzK9ewnV1n3gwF0OGXEUbMPQ"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost/api/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"favorite"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "b7f2e471-b3c7-4e8f-a3bc-d98c1ac3d31e",
+							"name": "Favorite List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk4YjZiMDc3MmJmZmRhNTMzNGUzZmVlZTM3ODEyMThiYzYzOTM0NGQ5MDM2YjEwODBkMTUxMjk1Yjg3Y2M4MmY1YzgzZmUxMTU5YTk5MWUxIn0.eyJhdWQiOiIxIiwianRpIjoiOThiNmIwNzcyYmZmZGE1MzM0ZTNmZWVlMzc4MTIxOGJjNjM5MzQ0ZDkwMzZiMTA4MGQxNTEyOTViODdjYzgyZjVjODNmZTExNTlhOTkxZTEiLCJpYXQiOjE1MzMxNDg3MjMsIm5iZiI6MTUzMzE0ODcyMywiZXhwIjoxNTY0Njg0NzIzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.a7Jrbm4x6Nsdl_MbHxC8UFKBAIfsteCfKtrhZ2HtUSBY8G5gzhSus5JglPB760xhAWTEGOGUDFgAnQcRAoHOFvAsPnh7jqk94u4i8cnGWyrQG_1H9T-QLUWzUvI7NhiYi2BOTrHs7Snmwe8yxu0z0a8LXr6e4hYYg4kehHIvyBgU_2MwTbGkPOBkZMG9bzflzl3ZG8IqPp0H21ajJe-1QlttX2y2a2ZDg-q2l6i21lQK3j2wVZkgbVK7uv578Lb8qNSrDy_vXjkY9R6ttgOjY6_KJgMjcyE_vcH3GUDubt5eqofZsNebyFof7oVgbo89Bt0mEqSt-swvNSji6AZRSbagQuHVMZLI-6r57--cb8GC0toMNPrFn6TSqcVwsIaPrOKw8pF6DdcahDFtdVfNTMqvYTx0JM8kVBvce5zlf4FrmIOp2zT7hKDidXEd15wqbov456GKRCFT9P-d8ViOIPuAFsQIW1uDQ8b1Aw0tJQtKfzSgHl52Mjp92ziH0xCNzIfrq5lwABl6WI1O_y9YuCVzYEZDD_-O9mD2aeXAf_DLfldiK4-tkfAuUIuCHUQR6FHqI8ZevP6Q19dk25hG5uBzbL9lEboUpdFbD_DK3T-bWULNDUqRL3hfnysARUys4RUmPRxZR_cY0ecNgrraAN1BLD1g_vSxzdpc5gPH5_E",
+										"disabled": false
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost/api/favorite",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"api",
+										"favorite"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 18:43:25 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 18:43:25 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "localhost",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "1520iu6gg9uibn0kfjmqliht05",
+									"key": "PHPSESSID"
+								},
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "Nwp7SUVspgnC08ngUMRxnKELyygFRViqutIuz4qy1DS28UsECTBGC9DiaYpYe266K8OyG61xkTkQxC43bNgfng%3D%3D",
+									"key": "bbr_member"
+								}
+							],
+							"body": "[{\"id\":8,\"name\":\"Faz\\u0131l Say4\",\"description\":\"Merhaba D\\u00fcnya6\",\"image\":null,\"slug\":\"fazil-say3\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":8}},{\"id\":13,\"name\":\"Faz\\u0131l Say0\",\"description\":\"Merhaba D\\u00fcnya9\",\"image\":null,\"slug\":\"fazil-say4\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":13}},{\"id\":14,\"name\":\"Faz\\u0131l Say0\",\"description\":\"Merhaba D\\u00fcnya8\",\"image\":null,\"slug\":\"fazil-say1\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":14}},{\"id\":20,\"name\":\"Faz\\u0131l Say3\",\"description\":\"Merhaba D\\u00fcnya6\",\"image\":null,\"slug\":\"fazil-say2\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":20}},{\"id\":28,\"name\":\"Faz\\u0131l Say8\",\"description\":\"Merhaba D\\u00fcnya9\",\"image\":null,\"slug\":\"fazil-say7\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":28}},{\"id\":41,\"name\":\"Faz\\u0131l Say4\",\"description\":\"Merhaba D\\u00fcnya1\",\"image\":null,\"slug\":\"fazil-say0\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":41}},{\"id\":45,\"name\":\"Faz\\u0131l Say7\",\"description\":\"Merhaba D\\u00fcnya5\",\"image\":null,\"slug\":\"fazil-say1\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":45}},{\"id\":46,\"name\":\"Faz\\u0131l Say9\",\"description\":\"Merhaba D\\u00fcnya7\",\"image\":null,\"slug\":\"fazil-say3\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:24\",\"updated_at\":\"2018-08-01 18:36:24\",\"pivot\":{\"users_id\":1,\"libraries_id\":46}},{\"id\":61,\"name\":\"Faz\\u0131l Say1\",\"description\":\"Merhaba D\\u00fcnya3\",\"image\":null,\"slug\":\"fazil-say8\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":61}},{\"id\":63,\"name\":\"Faz\\u0131l Say3\",\"description\":\"Merhaba D\\u00fcnya10\",\"image\":null,\"slug\":\"fazil-say8\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":63}},{\"id\":65,\"name\":\"Faz\\u0131l Say5\",\"description\":\"Merhaba D\\u00fcnya8\",\"image\":null,\"slug\":\"fazil-say10\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":65}},{\"id\":76,\"name\":\"Faz\\u0131l Say7\",\"description\":\"Merhaba D\\u00fcnya10\",\"image\":null,\"slug\":\"fazil-say2\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":76}},{\"id\":83,\"name\":\"Faz\\u0131l Say7\",\"description\":\"Merhaba D\\u00fcnya4\",\"image\":null,\"slug\":\"fazil-say5\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":83}},{\"id\":99,\"name\":\"Faz\\u0131l Say2\",\"description\":\"Merhaba D\\u00fcnya5\",\"image\":null,\"slug\":\"fazil-say0\",\"status\":\"a\",\"hit\":0,\"sort_order\":0,\"created_at\":\"2018-08-01 18:36:25\",\"updated_at\":\"2018-08-01 18:36:25\",\"pivot\":{\"users_id\":1,\"libraries_id\":99}}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Library",
+			"description": null,
+			"item": [
+				{
+					"name": "Library List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjhjNzYwODgwZWZlYTMwMzUxNjhiMWEzYjAwODFlNWJhOWYyMjg2MDAyNmVmYWY2NGUyYWI5ZjZkMTJiMjhlZTFiYWQ4OTRhNjUyMWFhMzIzIn0.eyJhdWQiOiIxIiwianRpIjoiOGM3NjA4ODBlZmVhMzAzNTE2OGIxYTNiMDA4MWU1YmE5ZjIyODYwMDI2ZWZhZjY0ZTJhYjlmNmQxMmIyOGVlMWJhZDg5NGE2NTIxYWEzMjMiLCJpYXQiOjE1MzMxMjQ4OTYsIm5iZiI6MTUzMzEyNDg5NiwiZXhwIjoxNTY0NjYwODk2LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.kqJ_pdKbQvSOlvQH-1lVi0xytqbCT37zYUcXDXYB8BlHXDnRqJ1SXNOtCdznZmWMhkp7hcbv3NmcI9-TKHSsGDITQBxjQCDLZeoYcTILQTgzLSaxWMHeEoXw2Osot2gLC0GP6tT75JPQQoUZAAiIQSlL8lHuwUAhknDGlCE2D_ndUefvYUKK08uelv64mWCBmlPNJ0Hq0ziPpexCW3tHoifjJLdssdqs8DgtRHtg_v4QNh0b0L_EgLSxUulOFDeFUM3SP1V3D8M2beX520SwpvmFmY1Ifeu9KLpKMCEAF6nh7GQbvAtPi08aiVDko2nOyu9ww4RX4b-c2CnR4yiwy5H3J6y8w9FfTH2xl4VZ_gr4uty6DyToeVFlJGo0cZOUsmDyZAdOKtnn4biZDXRV38dfVLJHY8kewWO079RQx8Drl6h79u9ITjUfCO7Fc6CVMGwWdp2ZLzvEbzsNfawPrffFVTdlpUcjtIiNfRWj5lFMq6GDv3OMGgXj53-tWh_PjB0GHcZ88lZJifCFTycqYgiX8PsfotFKlZD58N4aXeDBkQDYyieHItwEL2Vz4Y7mPw15j2q5Pi3rvmaQlDriqPtHPUY7QKhzLYr9ciK4WF8qZ0N1nkEvulmkV3dPGVNGxXfzjTgh50uxaILaQBzwiHq7CZOfBxcnlPtYJi21JUU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "f7027d71-6007-4c5f-b172-ea36f93b0620",
+							"name": "Library List",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"image\": null,\n    \"slug\": \"asd\",\n    \"status\": \"a\",\n    \"hit\": 1,\n    \"sort_order\": 1,\n    \"created_at\": null,\n    \"updated_at\": null\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libraries/store",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libraries",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Jul 2018 23:32:00 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Jul 2018 23:32:00 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"asda\",\"description\":\"asd\",\"image\":null,\"slug\":\"asd\",\"status\":\"a\",\"hit\":1,\"sort_order\":1,\"created_at\":null,\"updated_at\":null}]"
+						}
+					]
+				},
+				{
+					"name": "Library Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Library Dlete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRiZjc2NmU1NGRlYTJhMDlkMWQzYjJkZmIxZDhhMmUxMzFiYjY2MzRiMzdjM2Q5YmZiNzBjZTVkM2Y0ZDVmNjk3NTVlMTE1MTZjODAxMzExIn0.eyJhdWQiOiIxIiwianRpIjoiNGJmNzY2ZTU0ZGVhMmEwOWQxZDNiMmRmYjFkOGEyZTEzMWJiNjYzNGIzN2MzZDliZmI3MGNlNWQzZjRkNWY2OTc1NWUxMTUxNmM4MDEzMTEiLCJpYXQiOjE1MzMxMzE4MTMsIm5iZiI6MTUzMzEzMTgxMywiZXhwIjoxNTY0NjY3ODEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bNTfWGdDYvWAJJDGt14V9MfJp5-Z6DWlk6Uzd6M2DD9mHtHg4mKebTKQ8suJE8NzSCC94u2aBC9zzYArB91zaBvlJnk6kTKjpNj8LE4zs04F0vRscONEjDL51FMY9516H2Qyd_DY4_sb0bgUiUrQU4X6IUCMNiBl95Zl8bevFFJIw7fjkKtfeEZd-ic76obC3ZlqwdkQ2zNMKzlpWtwfp4v6Sfr77rD7ZpAQT7MF1seAYwkuOVdRnEgpPUabMGrZLuBMA1PjvbwbHOT7Zzg9KfuICyLSPMCXb_ELgde7C0yqemYhRgtHQMiaCpgKsYKgD245jxR1_znMdJ-wh_kLtW687KLzYQrLTtaKeobQ1CkCLK0SVjB6Z7Bpma9NvU7vDsIyXehISMCTuqfc4o5OdgTqLd-FiHxRFSNcDYnfGLYkWCRKlg14LGZQkBytvh5fyLImkokRCzuXVwNciTE1zlxYc1YV5vcDfy2zK-6jbDj55KQx2dVYo52VaMB6Rx82zyOGpBkk_NIZnk1QwlcTS4BrC3eiDvDnGV0WW4JjVOy8HXpKWTV1HtF0EK75cHLFX0hoTcq3p8wMdP-tNHvF-gKzPaSrscVNb5EdEjrEEWkcHXyFUFRdlUUejlBAEV3uywH0WrY6LZCf9bED9oQi_EgijSO1RQPqWdBpTRxxLwc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Library Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRiZjc2NmU1NGRlYTJhMDlkMWQzYjJkZmIxZDhhMmUxMzFiYjY2MzRiMzdjM2Q5YmZiNzBjZTVkM2Y0ZDVmNjk3NTVlMTE1MTZjODAxMzExIn0.eyJhdWQiOiIxIiwianRpIjoiNGJmNzY2ZTU0ZGVhMmEwOWQxZDNiMmRmYjFkOGEyZTEzMWJiNjYzNGIzN2MzZDliZmI3MGNlNWQzZjRkNWY2OTc1NWUxMTUxNmM4MDEzMTEiLCJpYXQiOjE1MzMxMzE4MTMsIm5iZiI6MTUzMzEzMTgxMywiZXhwIjoxNTY0NjY3ODEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.bNTfWGdDYvWAJJDGt14V9MfJp5-Z6DWlk6Uzd6M2DD9mHtHg4mKebTKQ8suJE8NzSCC94u2aBC9zzYArB91zaBvlJnk6kTKjpNj8LE4zs04F0vRscONEjDL51FMY9516H2Qyd_DY4_sb0bgUiUrQU4X6IUCMNiBl95Zl8bevFFJIw7fjkKtfeEZd-ic76obC3ZlqwdkQ2zNMKzlpWtwfp4v6Sfr77rD7ZpAQT7MF1seAYwkuOVdRnEgpPUabMGrZLuBMA1PjvbwbHOT7Zzg9KfuICyLSPMCXb_ELgde7C0yqemYhRgtHQMiaCpgKsYKgD245jxR1_znMdJ-wh_kLtW687KLzYQrLTtaKeobQ1CkCLK0SVjB6Z7Bpma9NvU7vDsIyXehISMCTuqfc4o5OdgTqLd-FiHxRFSNcDYnfGLYkWCRKlg14LGZQkBytvh5fyLImkokRCzuXVwNciTE1zlxYc1YV5vcDfy2zK-6jbDj55KQx2dVYo52VaMB6Rx82zyOGpBkk_NIZnk1QwlcTS4BrC3eiDvDnGV0WW4JjVOy8HXpKWTV1HtF0EK75cHLFX0hoTcq3p8wMdP-tNHvF-gKzPaSrscVNb5EdEjrEEWkcHXyFUFRdlUUejlBAEV3uywH0WrY6LZCf9bED9oQi_EgijSO1RQPqWdBpTRxxLwc"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "27b90b11-7f30-4881-b968-96129b33217b",
+							"name": "Library Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libraries",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libraries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"name\":\"asda\",\"description\":\"asd\",\"status\":\"a\",\"hit\":0,\"slug\":\"asda\",\"sort_order\":3,\"updated_at\":\"2018-08-01 00:03:10\",\"created_at\":\"2018-08-01 00:03:10\",\"id\":4}"
+						}
+					]
+				},
+				{
+					"name": "Library Update",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\",\n\t\"asdasd\":\"aaaaa\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "148c7db6-d2e5-497d-8f56-d12dd5736b2f",
+							"name": "Library Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libraries",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libraries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"name\":\"asda\",\"description\":\"asd\",\"status\":\"a\",\"hit\":0,\"slug\":\"asda\",\"sort_order\":3,\"updated_at\":\"2018-08-01 00:03:10\",\"created_at\":\"2018-08-01 00:03:10\",\"id\":4}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Song",
+			"description": null,
+			"item": [
+				{
+					"name": "Song List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYxYzkwYWRjMmJiMzIyYTNkOWVmYzdiMDgwNDUwNDBmZTM4ZjA2YThmNzk5ZjEyODg2NTViMjMxNTI2N2MzNDU1ZTQ2OTczMjZiM2FkYjBjIn0.eyJhdWQiOiIxIiwianRpIjoiNjFjOTBhZGMyYmIzMjJhM2Q5ZWZjN2IwODA0NTA0MGZlMzhmMDZhOGY3OTlmMTI4ODY1NWIyMzE1MjY3YzM0NTVlNDY5NzMyNmIzYWRiMGMiLCJpYXQiOjE1MzMxNTU5MzMsIm5iZiI6MTUzMzE1NTkzMywiZXhwIjoxNTY0NjkxOTMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQrinwWxT0DGfRGhjwWgMPjKWcbkOdl1eG2VB7tKo3kNJ6F54XTV681eqUE6rRUroqDrHktFN_G-d1Y0CQWTqLRZTXv65AvBTOTnZZHfTioq60jBdpF7k0bwfIPYCZ8DVn_1dJoUNJl89WUzAL95PZ4yzJth2bpIBmXnh6n9Sb2n5duM4vpR6IcRd-oUVS_ZlgzvQ1-f_A8OtUNW2vOIShx_DqugIJeG8ZTbz17TUvJ_mQ75lSCupzygHuyLWK8glEmOy4uw-Nf3_uEosTqq7KX8OVPOhTA0anLWVOT6hgWvpv1Se1THQJ2DBeVvlaRbNYL5Ocp-4hkqLzS8BOHJh46eK3vg9p2AJ2tXbL9Qu7F4V0NnDK0r2Uc2UUIaAtaD_oYr2281G7DeTrvWKAgwGgrVM4YIn0puXZqcKT8g7nVwgpzowXeWWV3XGiMBddW29aSA4egnMuEUBY1gL1nbWG-N2M7eImYISXNoXr8yyZopBG-Acfx-UZLmkJN4IBhfHnTkROEvGYML-o-sOgMjBW7v2xtcIJHFQtBVpYamaukVpIKiguRZcu19g793HVhnz_S8aSTMZurIY1Z0UI21e5SlIGjreD4MUtE3DqhjeI8unjTFfeYtS63AKYxlzZnVSfvPxgoYJAKGXXEqEAiQj9JAvMArXoJr_aZetKhMhr4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/song",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"song"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "25fb87c6-7119-4fa9-a6a6-3e4cb8508e82",
+							"name": "Song List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYxYzkwYWRjMmJiMzIyYTNkOWVmYzdiMDgwNDUwNDBmZTM4ZjA2YThmNzk5ZjEyODg2NTViMjMxNTI2N2MzNDU1ZTQ2OTczMjZiM2FkYjBjIn0.eyJhdWQiOiIxIiwianRpIjoiNjFjOTBhZGMyYmIzMjJhM2Q5ZWZjN2IwODA0NTA0MGZlMzhmMDZhOGY3OTlmMTI4ODY1NWIyMzE1MjY3YzM0NTVlNDY5NzMyNmIzYWRiMGMiLCJpYXQiOjE1MzMxNTU5MzMsIm5iZiI6MTUzMzE1NTkzMywiZXhwIjoxNTY0NjkxOTMzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQrinwWxT0DGfRGhjwWgMPjKWcbkOdl1eG2VB7tKo3kNJ6F54XTV681eqUE6rRUroqDrHktFN_G-d1Y0CQWTqLRZTXv65AvBTOTnZZHfTioq60jBdpF7k0bwfIPYCZ8DVn_1dJoUNJl89WUzAL95PZ4yzJth2bpIBmXnh6n9Sb2n5duM4vpR6IcRd-oUVS_ZlgzvQ1-f_A8OtUNW2vOIShx_DqugIJeG8ZTbz17TUvJ_mQ75lSCupzygHuyLWK8glEmOy4uw-Nf3_uEosTqq7KX8OVPOhTA0anLWVOT6hgWvpv1Se1THQJ2DBeVvlaRbNYL5Ocp-4hkqLzS8BOHJh46eK3vg9p2AJ2tXbL9Qu7F4V0NnDK0r2Uc2UUIaAtaD_oYr2281G7DeTrvWKAgwGgrVM4YIn0puXZqcKT8g7nVwgpzowXeWWV3XGiMBddW29aSA4egnMuEUBY1gL1nbWG-N2M7eImYISXNoXr8yyZopBG-Acfx-UZLmkJN4IBhfHnTkROEvGYML-o-sOgMjBW7v2xtcIJHFQtBVpYamaukVpIKiguRZcu19g793HVhnz_S8aSTMZurIY1Z0UI21e5SlIGjreD4MUtE3DqhjeI8unjTFfeYtS63AKYxlzZnVSfvPxgoYJAKGXXEqEAiQj9JAvMArXoJr_aZetKhMhr4",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost/api/song",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"api",
+										"song"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 20:39:13 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 20:39:13 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "localhost",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "1520iu6gg9uibn0kfjmqliht05",
+									"key": "PHPSESSID"
+								},
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "Nwp7SUVspgnC08ngUMRxnKELyygFRViqutIuz4qy1DS28UsECTBGC9DiaYpYe266K8OyG61xkTkQxC43bNgfng%3D%3D",
+									"key": "bbr_member"
+								}
+							],
+							"body": "[{\"id\":1,\"name\":\"Faz\\u0131l Say3\",\"file\":null,\"type\":null,\"slug\":\"fazil-say4\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":36,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":2,\"name\":\"Faz\\u0131l Say7\",\"file\":null,\"type\":null,\"slug\":\"fazil-say1\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":49,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":3,\"name\":\"Faz\\u0131l Say7\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":9,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":4,\"name\":\"Faz\\u0131l Say0\",\"file\":null,\"type\":null,\"slug\":\"fazil-say6\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":93,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":5,\"name\":\"Faz\\u0131l Say2\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":63,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":6,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":93,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":7,\"name\":\"Faz\\u0131l Say3\",\"file\":null,\"type\":null,\"slug\":\"fazil-say10\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":43,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":8,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":91,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":9,\"name\":\"Faz\\u0131l Say0\",\"file\":null,\"type\":null,\"slug\":\"fazil-say6\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":65,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":10,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say1\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":17,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":11,\"name\":\"Faz\\u0131l Say8\",\"file\":null,\"type\":null,\"slug\":\"fazil-say1\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":40,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":12,\"name\":\"Faz\\u0131l Say9\",\"file\":null,\"type\":null,\"slug\":\"fazil-say8\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":54,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":13,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say8\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":9,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":14,\"name\":\"Faz\\u0131l Say2\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":7,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":15,\"name\":\"Faz\\u0131l Say3\",\"file\":null,\"type\":null,\"slug\":\"fazil-say8\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":23,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":16,\"name\":\"Faz\\u0131l Say5\",\"file\":null,\"type\":null,\"slug\":\"fazil-say2\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":66,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":17,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say1\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":39,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":18,\"name\":\"Faz\\u0131l Say9\",\"file\":null,\"type\":null,\"slug\":\"fazil-say2\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":97,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":19,\"name\":\"Faz\\u0131l Say7\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":78,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":20,\"name\":\"Faz\\u0131l Say3\",\"file\":null,\"type\":null,\"slug\":\"fazil-say6\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":54,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null}]"
+						}
+					]
+				},
+				{
+					"name": "Song Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/song/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"song",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "672b24c8-21cc-4d74-9a82-7c50648cb5cb",
+							"name": "Song Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{api}}",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost/api/song/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"api",
+										"song",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 20:47:00 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 20:47:00 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "localhost",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "1520iu6gg9uibn0kfjmqliht05",
+									"key": "PHPSESSID"
+								},
+								{
+									"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "Nwp7SUVspgnC08ngUMRxnKELyygFRViqutIuz4qy1DS28UsECTBGC9DiaYpYe266K8OyG61xkTkQxC43bNgfng%3D%3D",
+									"key": "bbr_member"
+								}
+							],
+							"body": "{\"id\":1,\"name\":\"Faz\\u0131l Say3\",\"file\":null,\"type\":null,\"slug\":\"fazil-say4\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":36,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null}"
+						}
+					]
+				},
+				{
+					"name": "Song Dlete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/api/song/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"song",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Song Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"asdasda\",\n    \"slug\": \"asdasda\",\n    \"status\": \"a\",\n    \"sort_order\": 2,\n    \"libraries_id\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/song",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"song"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "ae6de100-a22a-445c-a176-34c995af7b5e",
+							"name": "Library Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libraries",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libraries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"name\":\"asda\",\"description\":\"asd\",\"status\":\"a\",\"hit\":0,\"slug\":\"asda\",\"sort_order\":3,\"updated_at\":\"2018-08-01 00:03:10\",\"created_at\":\"2018-08-01 00:03:10\",\"id\":4}"
+						}
+					]
+				},
+				{
+					"name": "Song Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"name\": \"Fazıl Say3\",\n        \"file\": null,\n        \"type\": null,\n        \"status\": \"a\",\n        \"sort_order\": 0,\n        \"libraries_id\": 36\n     \n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/song/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"song",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "9a8f15e0-5161-46cb-9b87-f3cd197a9f9f",
+							"name": "Library Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU",
+										"disabled": false
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "X-Requested-With",
+										"value": "XMLHttpRequest",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"asda\",\n    \"description\": \"asd\",\n    \"status\": \"a\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libraries",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libraries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 +0000",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Aug 2018 00:03:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000",
+									"name": "Host",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.7",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"body": "{\"name\":\"asda\",\"description\":\"asd\",\"status\":\"a\",\"hit\":0,\"slug\":\"asda\",\"sort_order\":3,\"updated_at\":\"2018-08-01 00:03:10\",\"created_at\":\"2018-08-01 00:03:10\",\"id\":4}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Play List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNkNTI5ODNhMDFlNmE2NDUyNWQyNWZmOTc2MjNhYTEyYjRmZTczZWZhOGZhNDU4MWRlOTQ4MzJjMTNmMjM4MGRmZjUyMWVjZDNkYTc5MDk4In0.eyJhdWQiOiIxIiwianRpIjoiY2Q1Mjk4M2EwMWU2YTY0NTI1ZDI1ZmY5NzYyM2FhMTJiNGZlNzNlZmE4ZmE0NTgxZGU5NDgzMmMxM2YyMzgwZGZmNTIxZWNkM2RhNzkwOTgiLCJpYXQiOjE1MzMwNzk4OTMsIm5iZiI6MTUzMzA3OTg5MywiZXhwIjoxNTY0NjE1ODkzLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.C0TqOiFwjI4nytHf40rNdJ3KeUsKdv3iC56zIDMmM6YaGHKcQdHnNsY3mw-wbLEkfRuqXgE5ZD5o_vOl2EMwmrF_qhSA6I91-TMqX0Qtk2GoHpuyGHXNKAH9hI-mr9-Nik6N1CfoQM_8ag7gHZG9oc_xBjVw1t67hRBOqm5HF-6XARYbwDTXojUPSPltKwais_bRcIW-MUGDSUoFiA6C8ScbzVN3S3bKJ6hUO3pBY0058eHPXl7Dmiitm7L4dMwYebjDlK1-ZWI-8y7wvQqHl_cvfrBDyoQYT-WjGf6-MptDVFWlykHO_nEdxBypXqjtVrlngmhQKYXNbRYYvXyQ4HfX_N0g8otMXHb3_qs6OxTqiS5p32KZECqe4ReZ-XyzG_bwwGQVGy0hjxIH7K53GfXwXLTbXfnEmYsvwnozAvMcyI0zocHQmsG34J1gCPsruJGtn_I_lqAofTWWJrfGXOTDvYg1VnBcJv5V30bn0fM77XdQ9ZoJL_SztbzrZm3MQjomd2N0BTyKqJJY4fdqBhrIw8ieI1PpIBCIp49O3nWQ4NvnJZdCR-YmJ8XPptHl6SQBVNAWu-rVPu4hBGeZVqVH5EHMwA95xLNAyiJhlT-wyl26ggq-6XvuUgwWWsMII_XYM079BcjTC26vavERZMnBP9p73MkB5AYZFFWkATU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/libraries/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"libraries",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "87b8b938-cccf-4507-8f4c-0ba4a19ecb9e",
+					"name": "Play List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api}}",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Uveys\",\n\t\"email\":\"uveysservetoglu@gmail.com\",\n\t\"password\":\"123\",\n\t\"password_confirmation\":\"123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/api/libraries/play/93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"libraries",
+								"play",
+								"93"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Aug 2018 21:08:51 +0000",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 01 Aug 2018 21:08:51 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Host",
+							"value": "localhost",
+							"name": "Host",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.7",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57",
+							"name": "X-RateLimit-Remaining",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "1520iu6gg9uibn0kfjmqliht05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Tue Jan 19 2038 06:14:07 GMT+0300 (+03)",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "Nwp7SUVspgnC08ngUMRxnKELyygFRViqutIuz4qy1DS28UsECTBGC9DiaYpYe266K8OyG61xkTkQxC43bNgfng%3D%3D",
+							"key": "bbr_member"
+						}
+					],
+					"body": "[{\"id\":4,\"name\":\"Faz\\u0131l Say0\",\"file\":null,\"type\":null,\"slug\":\"fazil-say6\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":93,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null},{\"id\":6,\"name\":\"Faz\\u0131l Say1\",\"file\":null,\"type\":null,\"slug\":\"fazil-say9\",\"hit\":0,\"status\":\"a\",\"sort_order\":0,\"libraries_id\":93,\"created_at\":\"2018-08-01 20:29:10\",\"updated_at\":\"2018-08-01 20:29:10\",\"deleted_at\":null}]"
+				}
+			]
+		}
+	]
+}
