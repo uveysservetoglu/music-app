@@ -40,6 +40,23 @@ class AuthController extends Controller
     }
 
     /**
+     * @param $token
+     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Http\JsonResponse|null|static
+     */
+    public function signupActivate($token)
+    {
+        $user = User::where('activation_token', $token)->first();
+        if (!$user) {
+            return response()->json([
+                'message' => 'This activation token is invalid.'
+            ], 404);
+        }
+        $user->active = true;
+        $user->activation_token = '';
+        $user->save();
+        return $user;
+    }
+    /**
      * Login user and create token
      *
      * @param  [string] email
@@ -58,7 +75,8 @@ class AuthController extends Controller
         ]);
 
         $credentials = request(['email', 'password']);
-
+        $credentials['active'] = 1;
+        $credentials['deleted_at'] = null;
         if (!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'Unauthorized'
@@ -103,6 +121,16 @@ class AuthController extends Controller
      * @return [json] user object
      */
     public function user(Request $request)
+    {
+        return response()->json($request->user());
+    }
+
+    /**
+     * Get the authenticated User
+     *
+     * @return [json] user object
+     */
+    public function favorite(Request $request)
     {
         return response()->json($request->user());
     }

@@ -5,6 +5,13 @@ This project is written for testing.
 # How to install 
 
 
+<p>
+Eğer login sırasında try non-object hatası alırsan.
+<pre>php artisan passport:client --personal</pre>
+</p>
+<br>
+<br>
+<br>
 <p>Step 1:<pre>composer update --no-plugins --no-scripts </pre></p>
 
 after database connection
