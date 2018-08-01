@@ -86,6 +86,14 @@ class LibrariesController extends BaseController
         }
     }
 
+
+    public function play($id){
+        $data = Song::where("libraries_id",$id)->get();
+        if ($data) {
+            return response()->json($data);
+        }
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -105,10 +113,5 @@ class LibrariesController extends BaseController
         }
     }
 
-    public function play($id){
-        $data = Song::where("libraries_id",$id);
-        if ($data) {
-            return response()->json($data);
-        }
-    }
+
 }
