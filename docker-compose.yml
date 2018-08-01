@@ -1,0 +1,24 @@
+version: '2'
+services:
+  music-php:
+    restart: always
+    image: hitalos/laravel
+    container_name: music-php
+    hostname: music
+    ports:
+      - "80:80"
+    volumes:
+      - ./default.conf:/etc/apache2/conf.d/music.conf
+      - ./music_log:/var/log/apache2
+      - ./music:/var/www
+  mysql:
+    restart: always
+    image: mysql:5.7
+    container_name: mysql
+    hostname: 127.0.0.1
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./data:/var/lib/mysql
