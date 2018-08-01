@@ -22,7 +22,7 @@ class LibrariesController extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -37,11 +37,11 @@ class LibrariesController extends BaseController
         $data->status = is_null(request('status')) ? 'p' : 'a';
         $data->hit = 0;
         $data->slug = str_slug(request('name'));
-        $data->sort_order = !is_null(request('sort_order')) ?request('sort_order') :  parent::sortOrder('Libraries');
+        $data->sort_order = !is_null(request('sort_order')) ? request('sort_order') : parent::sortOrder('Libraries');
 
         $data->save();
 
-        if($data){
+        if ($data) {
             return response()->json($data);
         }
     }
@@ -49,7 +49,7 @@ class LibrariesController extends BaseController
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -61,8 +61,8 @@ class LibrariesController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -76,11 +76,11 @@ class LibrariesController extends BaseController
         $data->description = request('description');
         $data->status = is_null(request('status')) ? 'p' : 'a';
         $data->slug = str_slug(request('name'));
-        $data->sort_order = !is_null(request('sort_order')) ?request('sort_order') :  parent::sortOrder('Libraries');
+        $data->sort_order = !is_null(request('sort_order')) ? request('sort_order') : parent::sortOrder('Libraries');
 
         $data->save();
 
-        if($data){
+        if ($data) {
             return response()->json($data);
         }
     }
@@ -88,18 +88,18 @@ class LibrariesController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
 
-        /**@todo cascade uygulanacak*/
+        /**@todo cascade uygulanacak */
         $data = Libraries::find($id)->delete();
 
-        if($data){
-            return response()->json(array("code"=>"200"));
-        }else{
+        if ($data) {
+            return response()->json(array("code" => "200"));
+        } else {
             return response()->json("Error");
         }
     }

@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+class Users extends Authenticatable
 {
     use Notifiable, HasApiTokens,SoftDeletes;
 
@@ -32,6 +32,6 @@ class User extends Authenticatable
     ];
 
     public function libraries(){
-        return $this->belongsToMany("App\Libraries");
+        return $this->belongsToMany(Libraries::class);
     }
 }

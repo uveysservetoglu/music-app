@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\User::class, 1)->create();
+        factory(\App\Users::class, 10)->create();
+        factory(\App\Libraries::class, 100)->create()->each(function ($libraries){
+            $boolean = rand(0,1);
+            $ids = range(0,10);
+            shuffle($ids);
+
+            if($boolean){
+                $sliced = array_slice($ids,0,2);
+                $libraries->Users()->attach($sliced);
+            }
+        });
     }
 }

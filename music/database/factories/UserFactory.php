@@ -13,11 +13,22 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(App\Users::class, function (Faker $faker) {
     return [
-        'name' => "admin",
-        'email' => "admin@admin.com",
+        'name' => "admin".rand(0,255),
+        'email' => "admin".rand(0,2424)."@admin.com",
         'password' => bcrypt(123),
-        'active' => 1,
+        'active' => 1
+    ];
+});
+
+$factory->define(App\Libraries::class, function (Faker $faker) {
+    return [
+        'name' => "Fazıl Say".rand(0,10),
+        'description' => "Merhaba Dünya".rand(0,10),
+        'slug' => str_slug("Fazıl Say".rand(0,10)),
+        'status' => "a",
+        'hit' => 0,
+        'sort_order' => 0,
     ];
 });

@@ -2,33 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Users;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class FavoriteController extends Controller
+class FavoriteController extends BaseController
 {
     /**
+     * favor list
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $user = User::find(5);
-        return response()->json($user);
+        try{
+
+            $data = Users::find(Auth::user()->id);
+            return response()->json($data->libraries);
+
+        }catch (QueryException $ex) {
+
+            return response()->json(["code"=>$ex->getCode(),"messages"=>$ex->errorInfo]);
+
+        }
+
     }
 
+
     /**
-     * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-    }
-
-    /**
+     * Add favor || remove favor
+     *
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -36,51 +42,25 @@ class FavoriteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ops =["attach" , "detach"];
+
+        $id = request("libraryId");
+        $action = request("action"); // attach || detach
+
+        if(!in_array($action,$ops))
+            return response()->json(["code"=>"404","messages"=>"Please select the correct action"]);
+
+        try{
+
+            $data = Users::find(Auth::user()->id);
+            $data->libraries()->$action($id);
+            return response()->json(["code"=>"200"]);
+
+        }catch (QueryException $ex) {
+
+            return response()->json(["code"=>$ex->getCode(),"messages"=>$ex->errorInfo]);
+
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

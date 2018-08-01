@@ -9,7 +9,7 @@ class Libraries extends Model
     protected $table = "libraries";
     protected $guarded = [];
 
-    public function user(){
-        return $this->belongsToMany("App\User");
+    public function users(){
+        return $this->belongsToMany(Users::class);
     }
 }
