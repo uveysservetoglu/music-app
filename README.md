@@ -4,6 +4,7 @@ This project is written for testing.
 
 # How to install 
 
+Enpointler için Music.json postman'e aktarınız.
 
 <p>
 Eğer login sırasında try non-object hatası alırsan.
@@ -20,7 +21,7 @@ after database connection
 <p>Step 3:<pre>php artisan passport:install</pre></p>
 
 
-<p>Step 3:<pre>php artisan db:seed</pre></p>
+<p>Step 4:<pre>php artisan db:seed</pre></p>
 step 3 not( mail: admin@admin.com, password:123)
 
 
@@ -46,4 +47,12 @@ cd music && composer update --no-plugins --no-scripts
 
 Step 2:
 
-<pre>docker pull hitalos/laravel && docker-compose up -d && docker exec music-php php artisan migrate</pre>
+<pre>docker pull hitalos/laravel && docker-compose up -d && docker exec music-php php artisan migrate && php artisan passport:client --personal
+ && php artisan db:seed</pre>
+ 
+ 
+ Favoriler -> Favori List
+ Kitaplık  -> Library List
+ Kitaplık Detayı -> Library Show 
+ Favori Ekleme -> Add Favor  -> action alıyor
+Favoriden Çıkarma -> Add Favor -> action alıyor
